@@ -1,0 +1,41 @@
+- to exit python command line, use Ctrl + D
+- to import a python file in the python command 
+- once you import a file in the python command line, you can access a specific
+  function by using >> <filname> <function>
+- __name__ is set when you run your code, adpots the name of the module it runs
+- __name__ will be __main__ if running on its own
+- __name__ functions tells you when you're running a program vs. importing a 
+  module
+- >> import filename as f -> f function
+
+- Flask is a class!
+- passing the constructor the name parameter is helpful: app = Flask(__name__)
+- run() is a flask method, runs the web app
+- function decorator goes above the header of a function, begins with @ symbol
+- app.route("/") whenever someone accesses the / root, they will run the 
+  associated function
+
+- $ which python 
+  tells you where the python you are using is located
+- you don't need virtual environments for each file
+- $ pip install --upgrade pip
+- it doesn't matter where the virtual environent lives; you can move to any 
+  directory in your computer and the v env will continue running
+
+HTML Templates (jinja2):
+- takes a lot of the HTML out of your python code
+- template files must be stored in a templates/ directory at the same level as
+  your Flask app file
+- render_template(<file>, <var1>, <var2>, ...)
+  Flask function to take a template file and return it as a string
+  Jinja2 has its own language to make templates more powerful
+- to get your file changes to be reflected:
+  1) quit web server and reload page
+  2) app.debug ('restarting with stat' tells you're using app.debug)
+     never use when you deploy a site!
+- double curly brakets denote a variable
+  ex. {{ message }} message is a variable
+- to print the contents of a list
+  ex. {% for i in fred %}
+      	 <b> i <b> <br>
+	 {% endfor %}

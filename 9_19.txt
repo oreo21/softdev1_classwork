@@ -1,0 +1,40 @@
+Softdev toolbox part 1
+
+	python 2.7
+
+	pip
+		Python package manager
+		Basic usage: $ pip install <package>
+	
+	virtualenv
+		Creates a sandbox for your python environment.
+		Allows you to maintain a specific python environment
+		messing with the system version.
+		Can install packages without root access to a system.
+	
+	flask
+		"microframework" for developing web applications.
+		Has its own development web server (no more public_html).
+		Contains the following 2 modules:
+			werkzeug - WSGI (web server gateway interface) 					   implementation. Allows our web apps to 					   respond to web requests.
+
+			jinja2 - html template engine. Easily create 
+				 mulitple pages that share style and 
+				 content.
+
+$ virtualenv <name> - creates a folder (name) with all info about virtual env contains bin
+bin contains executables; activate inside bin begins the virtual env
+$ . bob/bin/activate
+begins the <name> virtual env
+$ pip install flask
+$ deactivate (to leave virtual env)
+
+from flask import Flask /at the beginning of a Flask app
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+	return "Hi Everybody"!
+if __name__ = "__main__":
+	app.run()
